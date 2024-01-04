@@ -11,6 +11,7 @@ header {
 header.scrolled {
     background-color: hsla(203, 80%, 2%, 0.479);
     backdrop-filter: saturate(180%) blur(10px);
+    -webkit-backdrop-filter: saturate(180%) blur(10px);
 }
 
 .nav-top {
