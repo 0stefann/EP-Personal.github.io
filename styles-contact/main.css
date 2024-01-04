@@ -1,0 +1,174 @@
+:root {
+    --pos: 0;
+}
+.contact-forum {
+    color: #00f7ff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: 'Open Sans', sans-serif;
+    margin-top: 50px;
+}
+.contact-forum div {
+    width: 50vw;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.contact-forum form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    font-size: 2vh;
+}
+.contact-forum form label {
+    margin-bottom: 5px;
+}
+.contact-forum input {
+    background-color: hsla(204, 82%, 7%, 0.61);
+    border: solid;
+    color: white;
+    height: 3vh;
+    font-size: 2vh;
+    border-radius: 10px;
+    margin-bottom: 5px;
+}
+.contact-forum textarea {
+    height: 40vh;
+    background-color: hsla(204, 82%, 7%, 0.61);
+    border: solid;
+    color: white;
+    font-size: 2vh;
+    border-radius: 10px;
+    margin-bottom: 5px;
+}
+.contact-forum button {
+    background-color: #00f7ff;
+    border-radius: 50px;
+    font-size: 2vh;
+    font-family: 'Baloo Paaji 2', sans-serif;
+    font-weight: 500;
+    transition: .2s;
+}
+.contact-forum button:hover {
+    background-color: #00f7ff;
+    border-radius: 50px;
+    font-size: 2.5vh;
+    font-family: 'Baloo Paaji 2', sans-serif;
+    font-weight: 500;
+}
+.contact-container {
+    display: grid;
+    grid-template-columns: 20vw 20vw 20vw 20vw;
+    margin-top: 20px;
+    height: 20vw;
+    column-gap: 2.5vw;
+    margin-bottom: 50px;
+}
+.contact-container article {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: solid;
+    border-color: rgb(151, 151, 151);
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    border-width: 7px;
+    transition: .5s;
+    cursor: pointer;
+}
+.contact-container article:hover {
+    --pos: -60px;
+}
+.contact-container article:after {
+    position: absolute;
+    content:attr(data-text);
+    color:#00f7ff;
+    overflow: hidden;
+    top: 100%;
+    opacity: 0;
+    transition: .5s;
+    font-weight: bold;
+    user-select: text;
+}
+.contact-container article:hover:after {
+    opacity: 1;
+    top: 160px;
+    user-select: auto;
+}
+.contact-container button {
+    font-size: 2vw;
+    font-family: 'Baloo Paaji 2', sans-serif;
+    font-weight: 500;
+    border: none;
+    background-color: black;
+    color: #00f7ff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: var(--pos);
+    transition: .5s;
+    cursor: pointer;
+}
+.contact-container button i {
+    font-size: 4vw;
+}
+
+@media (max-width: 620px) {
+    .contact-container {
+        grid-template-columns: 256px;
+        row-gap: 25px;
+    }
+    .contact-container button {
+        font-size: 25.6px;
+    }
+    .contact-container article {
+        margin-left: -6.5px;
+        height: 256px;
+    }
+    .contact-container button i {
+        font-size: 40px;
+    }
+}
+
+@media (min-width: 621px) and (max-width: 980px) {
+    .contact-container {
+        grid-template-columns: 256px 256px;
+        row-gap: 25px;
+        column-gap: 25px;
+    }
+    .contact-container button {
+        font-size: 25.6px;
+    }
+    .contact-container button i {
+        font-size: 40px;
+    }
+    .contact-container article {
+        height: 256px;
+        transition: 0s;
+    }
+}
+@media (min-width: 1280px) {
+    .contact-container button {
+        font-size: 25.6px;
+    }
+    .contact-container {
+        grid-template-columns: 256px 256px 256px 256px;
+        height: 256px;
+    }
+    .contact-container button i {
+        font-size: 47.2px;
+    }
+}
+.copied-text {
+    color:yellow;
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+}

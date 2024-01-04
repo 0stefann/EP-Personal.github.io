@@ -1,0 +1,155 @@
+.liceu-container {
+    height: 100vh;
+}
+.liceu-container article {
+    background-image: url('../pics/liceu.jpg');
+    height: 100%;
+    width: 100%;
+    background-position:top;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    border-bottom: solid;
+    border-color: yellow;
+    border-width: 10px;
+    position: relative;
+}
+.liceu-container article div {
+    position: absolute;
+    margin-top: 10vh;
+    display: flex;
+    align-items: center;
+    border-radius: 100px;
+}
+.liceu-container nav {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    bottom: 0;
+    color: white;
+    font-weight: bold;
+    font-family: 'Baloo Paaji 2', sans-serif;
+    background-color: rgb(0, 0, 0);
+    padding-bottom: 2.5vh;
+    padding-top: 15px;
+    padding-right: 15px;
+    padding-left: 15px;
+    border-radius: 30px 30px 0 0;
+    margin-bottom: -10px;
+}
+.liceu-container img {
+    margin-right: 10px;
+    width: 10vw;
+    height: 10vw;
+    border-radius: 50%;
+    border: 7px solid yellow;
+}
+.liceu-container button {
+    background-color: yellow;
+    color:black;
+    font-weight: 550;
+    cursor:pointer;
+    border: none;
+    padding: 10px 15px 10px 15px;
+}
+.liceu-container button:hover {
+    color: black;
+    font-size: 20px;
+}
+.liceu-container h1 {
+    font-size: 2.5vw;
+    color: yellow;
+    font-weight: bold;
+    font-family: 'Baloo Paaji 2', sans-serif;
+    text-shadow: 5px 5px 10px black;
+}
+.liceu-container section {
+    color: white;
+    font-weight: bold;
+    font-family: 'Baloo Paaji 2', sans-serif;
+}
+.liceu-descriere-container {
+    color: yellow;
+    font-family: 'Baloo Paaji 2', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 2vw;
+}
+.liceu-descriere-container span {
+    color: rgb(182, 182, 0);
+}
+.liceu-descriere-container p {
+    color: white;
+    width: 80%;
+}
+.location {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 2vw;
+}
+.location h1 {
+    color: yellow;
+    font-weight: bold;
+    font-family: 'Baloo Paaji 2', sans-serif;
+    text-shadow: 5px 5px 10px black;
+}
+.location p {
+    color: white;
+}
+.location span {
+    color: yellow;
+    font-weight: bold;
+}
+#map {
+    height: 100%;
+    width: 100%;
+}
+@media (max-width: 579px) {
+    .liceu-container img {
+        width: 100px;
+        height: 100px;
+        border: 4px solid yellow;
+        margin-right: 3px;
+    }
+    .liceu-container h1 {
+        font-size: 20px;
+    }
+    .liceu-container button {
+        font-size: 12.8px;
+    }
+    .liceu-container button:hover {
+        color: black;
+        font-size: 12.8px;
+        margin-top: -10px;
+        filter: brightness(80%);
+    }
+    .liceu-descriere-container,
+    .location {
+        font-size: 16px;
+    }
+}
+@media (min-width: 580px) and (max-width:950px) {
+    .liceu-container img {
+        width: 100px;
+        height: 100px;
+        border: 5px solid yellow;
+    }
+    .liceu-container h1 {
+        font-size: 23.75px;
+    }
+    .liceu-descriere-container,
+    .location {
+        font-size: 19px;
+    }
+}
+@media (min-width:1130px) {
+    .liceu-descriere-container {
+        font-size: 22.6px;
+    }
+    .location {
+        font-size: 22.6px;
+    }
+}

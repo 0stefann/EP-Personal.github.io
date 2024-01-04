@@ -1,0 +1,7 @@
+footer {
+    color: white;
+    display: flex;
+    justify-content: center;
+    font-family: 'Open Sans', sans-serif;
+    margin-bottom: 15px;
+}

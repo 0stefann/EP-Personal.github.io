@@ -1,0 +1,38 @@
+body {
+    margin:0;
+    padding:0;
+    background-color: #01060a;
+    font-family: 'Lato', sans-serif;
+    background-image: url('../pics/star2.png');
+    background-size: contain;
+    background-size: 40% 40%;
+}
+::-webkit-scrollbar {
+    width: .7vw;
+    min-width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: rgba(0, 255, 255, 0.171);
+}
+::-webkit-scrollbar-thumb {
+    background: #00f7ff;
+    border-radius: 50px;
+}
+button {
+    background-color: transparent;
+    border: 0;
+    color:#00f7ff;
+    font-weight: 550;
+    cursor:pointer;
+    font-size: 16px;
+    border: solid;
+    border-radius: 15px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-right: 10px;
+    padding-left: 10px;
+    transition: .2s;
+}
+button:hover {
+    color: white;
+}

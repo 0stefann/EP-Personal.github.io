@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="styles-casa/header.css">
+    <link rel="stylesheet" href="styles-contact/main.css">
+    <link rel="stylesheet" href="styles-contact/footer.css">
+    <link rel="stylesheet" href="styles-contact/general.css">
+
+    <script src="https://kit.fontawesome.com/c2b1ffa878.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Outfit:wght@200;300;400;500;600;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Paaji+2:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+
+    <link rel="icon" type="image/png" href="pics/logo-title.png"/>
+    <title>SDfolio - Contact</title>
+</head>
+<body>
+    <header id="theheader">
+        <nav class="nav-top">
+            <a href="casa.html"><img class="logo" src="pics/sdfolio2.png" alt="."></a>
+            <section class="nav-top-middle">
+              <ul>
+                <li class="casa">
+                  <a href="casa.html">
+                    <i class="fa-solid fa-house"></i>
+                    <span>Casa</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="school.html">
+                    <i class="fa-solid fa-school"></i>
+                    <span>Liceu</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="activities.html">
+                    <i class="fa-solid fa-code"></i>
+                    <span>Hobbies</span>
+                  </a>
+                </li>
+                <li style="border-bottom: 2px solid #00f7ff; padding-bottom: 2px;">
+                  <a href="contact.html">
+                    <i class="fa-solid fa-phone"></i>
+                    <span>Contact</span>
+                  </a>
+                </li>
+              </ul>
+            </section>
+            <div>
+              <button class="hireme">Hire Me</button>
+              <span class="sandwitch"><i id="barsIcon" class="fa-solid fa-bars" style="font-size: 25px; margin-top:3px; cursor:pointer; transition:.2s;"></i></span>
+            </div>
+        </nav>
+        <nav class="nav-sandwitch">
+          <ul>
+            <li class="casa">
+              <a href="casa.html">
+                <i class="fa-solid fa-house"></i>
+                <span>Casa</span>
+              </a>
+            </li>
+            <li>
+              <a href="school.html">
+                <i class="fa-solid fa-school"></i>
+                <span>Liceu</span>
+              </a>
+            </li>
+            <li>
+              <a href="activities.html">
+                <i class="fa-solid fa-code"></i>
+                <span>Hobbies</span>
+              </a>
+            </li>
+            <li>
+              <a href="contact.html">
+                <i class="fa-solid fa-phone"></i>
+                <span>Contact</span>
+              </a>
+            </li>
+            <li style="margin-bottom: -5px;">
+              <button>Hire Me</button>
+            </li>
+          </ul>
+        </nav>
+    </header>
+    <main style="display: flex; flex-direction:column; justify-content: center; align-items: center;">
+        <section class="contact-forum">
+          <div>
+            <h1>CONTACTATI-MA!</h1>
+            <form onsubmit="sendEmail(); reset(); return false;">
+              <label>Nume</label>
+              <input type="text" name="firstName" id="fname" required>
+              <label>Prenume</label>
+              <input type="text" name="lastName" id="lname" required>
+              <label>Email</label>
+              <input type="text" name="email" id="email" required>
+              <label>Titlu</label>
+              <input type="text" name="titlu" id="title" required>
+              <label>Mesaj</label>
+              <textarea type="text" name="mesaj" id="message" required></textarea>
+              <button value="Submit">Trimite</button>
+            </form>
+          </div>
+        </section>
+        <section class="contact-container">
+            <article data-text="stef192007@gmail.com" onclick="copyText(this)">
+                <button>
+                    Mail
+                    <i class="fa-solid fa-envelope" style="color: #00f7ff;"></i>
+                </button>
+                <span class="copied-text"></span>
+            </article>
+            <article data-text=".stefann_" onclick="copyText(this)">
+                <button>
+                    Discord
+                    <i class="fa-brands fa-discord" style="color: #00f7ff;"></i>
+                </button>
+            </article>
+            <a href="https://www.instagram.com/stefann79_/" target="_blank" style="text-decoration: none;">
+              <article data-text="stefann79">
+                  <button>
+                      Instagram
+                      <i class="fa-brands fa-instagram" style="color: #00f7ff;"></i>
+                  </button>
+              </article>
+            </a>
+            <article data-text="0752.453.328" onclick="copyText(this)">
+                <button>
+                    Telefon
+                    <i class="fa-solid fa-phone" style="color: #00f7ff;"></i>
+                </button>
+            </article>
+        </section>
+    </main>
+    <footer>
+      &copy; Copyright, SDfolio.website 2023
+    </footer>
+
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        window.addEventListener('scroll', function() {
+          var header = document.getElementById('theheader');
+          if (window.scrollY > 0) {
+            header.classList.add('scrolled');
+          } else {
+            header.classList.remove('scrolled');
+          }
+        });
+        document.addEventListener('DOMContentLoaded', function () {
+          var barsIcon = document.getElementById('barsIcon');
+          var navSandwich = document.querySelector('.nav-sandwitch');
+          barsIcon.addEventListener('click', function () {
+            navSandwich.style.display = navSandwich.style.display === 'block' ? 'none' : 'block';
+          });
+          window.addEventListener('resize', function () {
+            if (window.innerWidth > 640) {
+              navSandwich.style.display = 'none';
+            }
+          });
+        });
+        function copyText(articleElement) {
+          var textToCopy = articleElement.getAttribute('data-text');
+          var textarea = document.createElement("textarea");
+          textarea.value = textToCopy;
+          document.body.appendChild(textarea);
+          textarea.select();
+          textarea.setSelectionRange(0, 99999);
+          document.execCommand("copy");
+          document.body.removeChild(textarea);
+          var span = document.createElement("span");
+          span.innerText = "Textul a fost copiat.";
+          span.className = "copied-text";
+          articleElement.appendChild(span);
+          setTimeout(function () {
+              articleElement.removeChild(span);
+          }, 3000);
+        }
+        function sendEmail() {
+          Email.send({
+            SecureToken : "26c0db95-3ee6-4b83-8934-2eb93305cdb1",
+            To : 'stef192007@gmail.com',
+            From : document.getElementById("email").value,
+            Subject : document.getElementById("title").value,
+            Body : document.getElementById("lname").value + document.getElementById("fname").value + " -> " + document.getElementById("message").value
+          }).then(
+            message => alert(message)
+          );
+        }
+      </script>
+</body>
+</html>
